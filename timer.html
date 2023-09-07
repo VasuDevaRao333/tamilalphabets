@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternate Alphabets Display</title>
+    <style>
+	body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.content {
+    text-align: center;
+}
+
+h1 {
+    font-size: 130px;
+    color: white;
+	background-color: blue;
+	width: 300px;
+	height: 200px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+
+	</style>
+</head>
+<body>
+ 
+    <div class="content">
+        <h1 id="alphabet">ஆ</h1>
+    </div>
+    <script>
+	const alphabets = ["ங", "ச", "ஞ", "ந", "ம", "ர", "வ", "ள", "ன", "ஜ", "ஹ", "க்ஷ", "அ", "உ", "எ", "ஏ", "ஓ", "க", "ண", "ட", "த", "ப", "ய", "ல", "ழ", "ற", "ஷ", "ஸ", "ஆ", "இ", "ஈ", "ஊ", "ஐ", "ஒ", "ஔ"];
+
+let currentIndex = 0;
+
+function displayNextAlphabet() {
+    document.getElementById("alphabet").textContent = alphabets[currentIndex];
+    currentIndex = (currentIndex + 1) % alphabets.length;
+}
+
+setInterval(displayNextAlphabet, 2000); // Change alphabet every second
+
+
+	</script>
+</body>
+</html>
